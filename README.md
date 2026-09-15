@@ -9,7 +9,7 @@ Single-page site built around real customer footage (kacchi, polao, rezala, borh
 ## Structure
 
 - `index.html` — main site markup
-- `assets/img/`, `assets/video/`, `assets/team/` — assets actually referenced by index.html
+- `media/img/`, `media/video/`, `media/team/` — assets actually referenced by index.html (named `media/`, not `assets/` — Cloudflare Workers static assets 404s everything under a top-level folder literally named `assets`, so it's avoided here)
 - `design-package.md` — brand, palette, type, and section/band reference
 - `frames/`, `processed/`, `source/`, `thumbs/` — hero footage assets in various pipeline stages (not directly referenced by the site)
 - `build/` — build output
@@ -18,11 +18,11 @@ Single-page site built around real customer footage (kacchi, polao, rezala, borh
 
 These files are referenced by `index.html` but don't exist anywhere in this repo yet — they need to be sourced or regenerated, or the site will show broken images/video for these spots:
 
-- `assets/img/hero-ending.jpg`
-- `assets/img/hero-poster.jpg`
-- `assets/video/hero-scrub.mp4`
-- `assets/video/kacchi-pour.mp4`
-- `assets/img/kacchi-pour-poster.jpg`
+- `media/img/hero-ending.jpg`
+- `media/img/hero-poster.jpg`
+- `media/video/hero-scrub.mp4`
+- `media/video/kacchi-pour.mp4`
+- `media/img/kacchi-pour-poster.jpg`
 
 ## Brand promise
 
