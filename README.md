@@ -8,7 +8,7 @@ Single-page site built around real customer footage (kacchi, polao, rezala, borh
 
 ## Structure
 
-- `v2-single-page-index.html` — main site markup
+- `index.html` — main site markup
 - `design-package.md` — brand, palette, type, and section/band reference
 - `frames/`, `processed/`, `source/`, `thumbs/` — hero footage assets in various pipeline stages
 - `build/` — build output
