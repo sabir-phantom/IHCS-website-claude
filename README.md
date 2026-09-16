@@ -1,28 +1,45 @@
 # IHCS-website-claude
 
-Website redesign for Iqbal Hossain Catering Service (IHCS) — Dhaka's dawat caterer since 1987.
+Website for Iqbal Hossain Catering Service (IHCS) — Dhaka's dawat caterer since 1987.
+Live at https://ihcs.sabir.dpdns.org
 
-## About
+## What this is
 
-Single-page site built around real customer footage (kacchi, polao, rezala, borhani), a scroll-driven hero sequence, and a "Build your dawat" WhatsApp quote flow. Design details, palette, typography, and section map live in [design-package.md](design-package.md).
+A 14-page static site in a Mughal court style: deep emerald, gold cusped arches, jali
+lattice, ivory marble panels with pietra dura flower inlay. The home page carries a
+scroll-driven hero video; every other page is a normal page with the same chrome.
+
+Pages: home, about, founder, services, menus, venues, gallery, contact, plus six service
+pages (wedding, corporate, private party, buffet, outdoor, iftar). Page addresses match
+the old WordPress site so existing links and search results still work.
 
 ## Structure
 
-- `index.html` — main site markup
-- `media/img/`, `media/video/`, `media/team/` — assets actually referenced by index.html (named `media/`, not `assets/` — Cloudflare Workers static assets 404s everything under a top-level folder literally named `assets`, so it's avoided here)
-- `design-package.md` — brand, palette, type, and section/band reference
-- `frames/`, `processed/`, `source/`, `thumbs/` — hero footage assets in various pipeline stages (not directly referenced by the site)
-- `build/` — build output
+- `index.html` and one folder per page, each holding its own `index.html`
+- `media/` — css, js, img, team, video. Named `media/`, not `assets/`, because Cloudflare
+  Workers static assets 404s everything under a top-level folder literally named `assets`
+- `media/css/site.css`, `media/js/site.js`, `media/js/hero.js` — shared by every page
+- `build/build-pages.mjs` — generates every page from shared parts. Not served (see
+  `.assetsignore`)
+- `design-package.md` — palette, type, motifs and section map
 
-### Known missing assets
+## Editing
 
-These files are referenced by `index.html` but don't exist anywhere in this repo yet — they need to be sourced or regenerated, or the site will show broken images/video for these spots:
+Page content lives in `build/build-pages.mjs`, not in the generated HTML. Edit the
+builder, then run it and commit the result:
 
-- `media/img/hero-ending.jpg`
-- `media/img/hero-poster.jpg`
-- `media/video/hero-scrub.mp4`
-- `media/video/kacchi-pour.mp4`
-- `media/img/kacchi-pour-poster.jpg`
+    node build/build-pages.mjs
+
+It writes to the site folder set in the `OUT` constant at the top of that file.
+
+## Deploy
+
+Pushing to `main` triggers a Cloudflare Workers build automatically.
+
+## Earlier version
+
+The single-page navy version that ran here before this redesign is kept at tag
+`onepage-v1` and branch `onepage-navy`.
 
 ## Brand promise
 
