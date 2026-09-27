@@ -51,7 +51,7 @@ const ICON_FB = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10
 const ICON_IG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>';
 const ICON_WA = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l1.9-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>';
 const CHEV = '<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2.5 4.5L6 8l3.5-3.5"/></svg>';
-const FAVICON = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M4 62V26C4 18 9 14 14 13C15 7 21 4 26 5C28 2 30 1 32 0C34 1 36 2 38 5C43 4 49 7 50 13C55 14 60 18 60 26V62Z' fill='%230F3329' stroke='%23D2AE6D' stroke-width='3'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-family='Georgia,serif' font-size='14' font-weight='700' fill='%23EDB84E'%3EIHCS%3C/text%3E%3C/svg%3E";
+const FAVICON = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M4 62V26C4 18 9 14 14 13C15 7 21 4 26 5C28 2 30 1 32 0C34 1 36 2 38 5C43 4 49 7 50 13C55 14 60 18 60 26V62Z' fill='%2317274D' stroke='%23D2AE6D' stroke-width='3'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-family='Georgia,serif' font-size='14' font-weight='700' fill='%23EDB84E'%3EIHCS%3C/text%3E%3C/svg%3E";
 
 const jharokha = (r, img, alt, { tag = '', w = 800, h = 1200, eager = false, video = '' } = {}) => `
 <div class="jharokha">
@@ -298,7 +298,7 @@ function write({ slug = '', title, desc, cur, sub = '', main, home = false, ogIm
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${title}</title>
 <meta name="description" content="${desc}">
-<meta name="theme-color" content="#0F3329">
+<meta name="theme-color" content="#17274D">
 <script>document.documentElement.classList.add('js')</script>
 <link rel="icon" href="${FAVICON}">
 <link rel="apple-touch-icon" href="${r}media/img/logo.png">
@@ -390,7 +390,7 @@ write({
     <div class="media" data-io>${jharokha(r, 'kacchi-pour-poster.jpg', '', { tag: 'Shahi mutton kacchi', video: 'kacchi-pour.mp4' })}</div>
   </div>
 </section>
-<div class="arcade to-emerald" aria-hidden="true"></div>
+<div class="arcade to-navy" aria-hidden="true"></div>
 
 <section aria-label="Our services">
   <div class="wrap">
@@ -433,7 +433,7 @@ ${reels(r)}
   <div class="marquee" aria-label="Venues we cater at"><div class="marquee-track">${[...VENUES, ...VENUES].map((v, i) => `<span${i >= VENUES.length ? ' aria-hidden="true"' : ''}>${v}</span>`).join('')}</div></div>
   <p style="text-align:center;margin-top:34px"><a class="link-arrow" href="${r}venues/">See all venues and achievements <span aria-hidden="true">&rarr;</span></a></p>
 </section>
-<div class="arcade to-emerald" aria-hidden="true"></div>
+<div class="arcade to-navy" aria-hidden="true"></div>
 
 <section aria-label="Our founder">
   <div class="wrap split rev">
@@ -465,7 +465,7 @@ ${reels(r)}
     ])}</div>
   </div>
 </section>
-<div class="arcade to-emerald" aria-hidden="true"></div>
+<div class="arcade to-navy" aria-hidden="true"></div>
 
 ${ctaBand(r)}`
 });
@@ -490,7 +490,7 @@ ${pageHero(r, { crumbs: [['About']], eyebrow: 'About Iqbal Catering', h1: 'Where
     </div>
   </div>
 </section>
-<div class="arcade to-emerald" aria-hidden="true"></div>
+<div class="arcade to-navy" aria-hidden="true"></div>
 <section aria-label="Our experience" style="padding-block:clamp(60px,8vw,100px)"><div class="wrap">${medallions(STATS)}</div></section>
 <section aria-label="Our quote" style="padding-top:0">
   <div class="wrap royal-quote" data-io>
@@ -511,7 +511,7 @@ ${pageHero(r, { crumbs: [['About']], eyebrow: 'About Iqbal Catering', h1: 'Where
     ], 4)}
   </div>
 </section>
-<div class="arcade to-emerald" aria-hidden="true"></div>
+<div class="arcade to-navy" aria-hidden="true"></div>
 <section aria-label="Vision and values">
   <div class="wrap">
     <div class="split">
@@ -539,7 +539,7 @@ ${pageHero(r, { crumbs: [['About']], eyebrow: 'About Iqbal Catering', h1: 'Where
     ${features(WHY, 3)}
   </div>
 </section>
-<div class="arcade to-emerald" aria-hidden="true"></div>
+<div class="arcade to-navy" aria-hidden="true"></div>
 ${ctaBand(r)}`
 });
 
@@ -567,7 +567,7 @@ ${pageHero(r, { crumbs: [['Founder &amp; Leadership']], eyebrow: 'Background of 
     <cite><b>Mohd. Iqbal Hossain</b></cite>
   </div>
 </section>
-<div class="arcade to-emerald" aria-hidden="true"></div>
+<div class="arcade to-navy" aria-hidden="true"></div>
 <section id="story" aria-label="The founder's story">
   <div class="wrap">
     <div class="split" style="align-items:start">
@@ -612,7 +612,7 @@ ${pageHero(r, { crumbs: [['Founder &amp; Leadership']], eyebrow: 'Background of 
   <div class="royal-quote" data-io style="margin-top:60px"><p style="font-size:clamp(24px,3vw,36px)">"Continue the family tradition with honesty, dedication and innovation, so Iqbal Catering stays relevant, competitive and trusted by future generations."</p><cite><b>Mr. Abdul Qayyuum</b>, second-generation leadership</cite></div>
   </div>
 </section>
-<div class="arcade to-emerald" aria-hidden="true"></div>
+<div class="arcade to-navy" aria-hidden="true"></div>
 ${ctaBand(r, { eyebrow: 'A legacy of hospitality', h: 'Experience the standard built by the Iqbal family.', p: 'Tell us about your event and our team will plan the menu and service with you.' })}`
 });
 
@@ -629,7 +629,7 @@ ${pageHero(r, { crumbs: [['Services']], eyebrow: 'Our services', h1: 'Personal c
     ${svcCards(r)}
   </div>
 </section>
-<div class="arcade to-emerald" aria-hidden="true"></div>
+<div class="arcade to-navy" aria-hidden="true"></div>
 <section aria-label="Our service process">
   <div class="wrap">
     <div class="head center" data-io><span class="eyebrow">Our service process</span><h2>Professional coordination from planning to presentation.</h2><div class="orn" aria-hidden="true"><i></i></div></div>
@@ -655,7 +655,7 @@ ${pageHero(r, { crumbs: [['Services']], eyebrow: 'Our services', h1: 'Personal c
     </div>
   </div>
 </section>
-<div class="arcade to-emerald" aria-hidden="true"></div>
+<div class="arcade to-navy" aria-hidden="true"></div>
 <section aria-label="Why choose us">
   <div class="wrap">
     <div class="head center" data-io><span class="eyebrow">Why choose us</span><h2>Built around quality and reliability.</h2><div class="orn" aria-hidden="true"><i></i></div></div>
@@ -830,7 +830,7 @@ ${pageHero(r, { crumbs: [['Services', 'services/'], [d.crumb]], eyebrow: s.name.
     ${features(d.features, 4)}
   </div>
 </section>
-<div class="arcade to-emerald" aria-hidden="true"></div>
+<div class="arcade to-navy" aria-hidden="true"></div>
 <section aria-label="Booking process">
   <div class="wrap">
     <div class="head center" data-io><span class="eyebrow">Booking process</span><h2>From enquiry to event-day execution.</h2><div class="orn" aria-hidden="true"><i></i></div><p>Share your event details and our team will guide you through menu selection, quotation and service planning.</p></div>
@@ -860,7 +860,7 @@ ${pageHero(r, { crumbs: [['Services', 'services/'], [d.crumb]], eyebrow: s.name.
     <div data-io>${faqs(d.faqs)}</div>
   </div>
 </section>
-<div class="arcade to-emerald" aria-hidden="true"></div>
+<div class="arcade to-navy" aria-hidden="true"></div>
 <section aria-label="Other services" style="padding-bottom:0">
   <div class="wrap">
     <div class="head center" data-io><span class="eyebrow">More services</span><h2>Planning something else?</h2></div>
@@ -884,7 +884,7 @@ ${pageHero(r, { crumbs: [['Menus']], eyebrow: 'A rich culinary collection', h1: 
     <div class="menus-on-marble">${menusBlock(r)}</div>
   </div>
 </section>
-<div class="arcade to-emerald" aria-hidden="true"></div>
+<div class="arcade to-navy" aria-hidden="true"></div>
 <section aria-label="Culinary categories">
   <div class="wrap">
     <div class="head center" data-io><span class="eyebrow">Tradition and variety</span><h2>Menus tailored around your event.</h2><div class="orn" aria-hidden="true"><i></i></div></div>
@@ -913,7 +913,7 @@ ${pageHero(r, { crumbs: [['Venues &amp; Achievements']], eyebrow: 'Venues &amp; 
     <div data-io>${medallions([{ v:'35+', count:35, suffix:'+', l:'years of experience' }, { v:'20+', count:20, suffix:'+', l:'prestigious venues operated' }, { v:'5-Star', l:'category convention center operated' }, { v:'1987', l:'founded' }]).replace('class="medallions"', 'class="medallions" style="grid-template-columns:1fr 1fr;row-gap:36px"')}</div>
   </div>
 </section>
-<div class="arcade to-emerald" aria-hidden="true"></div>
+<div class="arcade to-navy" aria-hidden="true"></div>
 <section id="venue-list" aria-label="Our distinguished portfolio">
   <div class="wrap">
     <div class="head" data-io><span class="eyebrow">Our distinguished portfolio</span><h2>Premium convention centers and elite venues.</h2><p>Our team knows these halls: where the counters go, how guests move, and how long service takes.</p></div>
@@ -940,7 +940,7 @@ ${pageHero(r, { crumbs: [['Venues &amp; Achievements']], eyebrow: 'Venues &amp; 
     <cite><b>Iqbal Catering</b></cite>
   </div>
 </section>
-<div class="arcade to-emerald" aria-hidden="true"></div>
+<div class="arcade to-navy" aria-hidden="true"></div>
 ${ctaBand(r, { eyebrow: 'Planning a prestigious event?', h: 'Tell us the venue. We will plan around it.' })}`
 });
 
@@ -975,7 +975,7 @@ ${pageHero(r, { crumbs: [['Gallery']], eyebrow: 'Symbol of client satisfaction',
     <div class="gallery">${GALLERY.map(([f, w, h, c]) => `<button type="button" data-caption="${c.replace(/"/g, '&quot;')}" aria-label="View photo: ${c.replace(/"/g, '&quot;')}"><img src="${r}media/img/${f}" alt="${c.replace(/"/g, '&quot;')}" width="${w}" height="${h}" loading="lazy"><figcaption aria-hidden="true">${c}</figcaption></button>`).join('')}</div>
   </div>
 </section>
-<div class="arcade to-emerald" aria-hidden="true"></div>
+<div class="arcade to-navy" aria-hidden="true"></div>
 ${reels(r)}
 ${deck(r, false)}
 ${ctaBand(r)}`
@@ -997,7 +997,7 @@ ${pageHero(r, { crumbs: [['Contact']], eyebrow: 'Contact Iqbal Catering', h1: 'R
     </div>
   </div>
 </section>
-<div class="arcade to-emerald" aria-hidden="true"></div>
+<div class="arcade to-navy" aria-hidden="true"></div>
 <section id="quote" aria-label="Request a quotation">
   <div class="wrap">
     <div class="head" data-io>

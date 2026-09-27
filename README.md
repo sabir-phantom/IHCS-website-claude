@@ -5,7 +5,7 @@ Live at https://ihcs.sabir.dpdns.org
 
 ## What this is
 
-A 14-page static site in a Mughal court style: deep emerald, gold cusped arches, jali
+A 14-page static site in a Mughal court style: deep navy from the IHCS logo, gold cusped arches, jali
 lattice, ivory marble panels with pietra dura flower inlay. The home page carries a
 scroll-driven hero video; every other page is a normal page with the same chrome.
 
