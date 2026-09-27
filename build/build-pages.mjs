@@ -1019,7 +1019,6 @@ ${pageHero(r, { crumbs: [['Contact']], eyebrow: 'Contact Iqbal Catering', h1: 'R
     </div>
     <div class="head" data-io style="margin:64px 0 30px"><span class="eyebrow">Owners and managing partners</span></div>
     <ul class="partners five" data-stagger>${PARTNERS.map(p => `<li class="partner">${jharokha(r, '', p.name, { w: p.w, h: p.h }).replace(`src="${r}media/img/"`, `src="${r}media/team/${p.img}"`)}<b>${p.name}</b><span>${p.role}</span><a class="phone" href="tel:${p.phone}">${p.phoneLabel}</a></li>`).join('')}</ul>
-    <div class="map-frame" data-io style="margin-top:64px"><iframe title="Map of Iqbal Catering head office in Adabor, Mohammadpur, Dhaka" src="https://www.google.com/maps?q=Nobodoy+Housing+Society,+Adabor,+Mohammadpur,+Dhaka&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
   </div>
 </section>`
 });
