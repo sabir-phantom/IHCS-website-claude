@@ -65,7 +65,7 @@ const jharokha = (r, img, alt, { tag = '', w = 800, h = 1200, eager = false, vid
 const features = (list, cols = 3) => `<ul class="features" style="--cols:${cols}" data-stagger>${list.map(f => `<li class="feature"><h3>${f.h}</h3><p>${f.p}</p></li>`).join('')}</ul>`;
 const steps = list => `<ol class="steps" data-stagger>${list.map((s, i) => `<li class="step"><span class="step-num">${i + 1}</span><h3>${s.h}</h3><p>${s.p}</p></li>`).join('')}</ol>`;
 const faqs = list => list.map(f => `<details class="faq-item"><summary>${f.q}<i aria-hidden="true"></i></summary><p class="ans">${f.a}</p></details>`).join('');
-const medallions = list => `<ul class="medallions" data-stagger>${list.map(m => `<li class="medal"><div class="medal-disc"><b${m.count ? ` data-count="${m.count}" data-suffix="${m.suffix || ''}"` : ''}>${m.v}</b></div><span>${m.l}</span></li>`).join('')}</ul>`;
+const medallions = (list, rule = false) => `${rule ? '<div class="orn" aria-hidden="true"><i></i></div>' : ''}<ul class="medallions" data-stagger>${list.map(m => `<li class="medal"><div class="medal-disc"><b${m.count ? ` data-count="${m.count}" data-suffix="${m.suffix || ''}"` : ''}>${m.v}</b></div><span>${m.l}</span></li>`).join('')}</ul>`;
 const STATS = [
   { v:'35+', count:35, suffix:'+', l:'years of experience' },
   { v:'20+', count:20, suffix:'+', l:'prestigious venues' },
@@ -372,8 +372,8 @@ write({
   </div>
 </section>
 
-<section aria-label="Iqbal Catering at a glance" style="padding-block:clamp(56px,7vw,90px)">
-  <div class="wrap">${medallions(STATS)}</div>
+<section class="stats-band" aria-label="Iqbal Catering at a glance" style="padding-block:clamp(60px,8vw,100px)">
+  <div class="wrap">${medallions(STATS, true)}</div>
 </section>
 
 <div class="arcade" aria-hidden="true"></div>
@@ -491,7 +491,7 @@ ${pageHero(r, { crumbs: [['About']], eyebrow: 'About Iqbal Catering', h1: 'Where
   </div>
 </section>
 <div class="arcade to-navy" aria-hidden="true"></div>
-<section aria-label="Our experience" style="padding-block:clamp(60px,8vw,100px)"><div class="wrap">${medallions(STATS)}</div></section>
+<section class="stats-band" aria-label="Our experience" style="padding-block:clamp(60px,8vw,100px)"><div class="wrap">${medallions(STATS, true)}</div></section>
 <section aria-label="Our quote" style="padding-top:0">
   <div class="wrap royal-quote" data-io>
     <div class="orn" aria-hidden="true"><i></i></div>

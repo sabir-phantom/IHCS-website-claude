@@ -197,16 +197,24 @@ body.paused *,body.paused *::before,body.paused *::after{animation-play-state:pa
 @media (min-width:901px){.sticky-col{position:sticky;top:120px}}
 @media (max-width:900px){.split,.split.rev{grid-template-columns:1fr}.split .media{max-width:320px}.split.rev .media{order:-1}}
 
-/* ---------- medallion stats ---------- */
-.medallions{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;list-style:none;margin:0;padding:0;text-align:center}
-.medal{display:flex;flex-direction:column;align-items:center}
-.medal-disc{position:relative;width:150px;height:150px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle,rgba(210,174,109,.12),rgba(210,174,109,0) 70%);box-shadow:inset 0 0 0 1px var(--gold-strong),0 0 0 7px transparent,0 0 0 8px var(--gold-line)}
-.medal-disc::before{content:"";position:absolute;inset:16px;border-radius:50%;background:var(--jali) center/28px 28px;opacity:.18}
-.medal-disc b{position:relative;font-family:var(--display);font-weight:400;font-size:38px;color:var(--text)}
-.medal span{margin-top:16px;font-size:14.5px;color:var(--text-2);max-width:18ch}
-.marble .medal-disc b{color:var(--ink)}
-.marble .medal-disc{box-shadow:inset 0 0 0 1px rgba(126,97,40,.7),0 0 0 7px transparent,0 0 0 8px rgba(126,97,40,.3)}
-@media (max-width:900px){.medallions{grid-template-columns:1fr 1fr;row-gap:36px}}
+/* ---------- medallion stats, jharokha niches ---------- */
+.stats-band{background:radial-gradient(ellipse 72% 120% at 50% 50%,rgba(210,174,109,.13),rgba(210,174,109,0) 70%)}
+.stats-band .orn{margin:0 auto clamp(30px,4vw,44px)}
+.medallions{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(14px,2.2vw,30px);list-style:none;margin:0;padding:0;text-align:center}
+.medal{position:relative;isolation:isolate;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;aspect-ratio:3/3.05;max-width:280px;width:100%;margin-inline:auto;padding:16% 9% 9%}
+.medal::before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(168deg,#FBF6EA,var(--ivory) 45%,var(--ivory-2));-webkit-mask:var(--arch-mask) center/100% 100% no-repeat;mask:var(--arch-mask) center/100% 100% no-repeat}
+.medal::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:var(--arch-line) center/100% 100% no-repeat}
+.medal-disc{position:relative;width:auto;height:auto;border-radius:0;background:none;box-shadow:none;display:flex;align-items:center;justify-content:center}
+.medal-disc::before{content:"";position:absolute;inset:-26% -34%;border-radius:50%;background:var(--jali) center/26px 26px;opacity:.13}
+.medal-disc b{position:relative;font-family:var(--display);font-weight:400;font-size:clamp(28px,3.2vw,46px);line-height:1;color:var(--ink)}
+.medal span{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;line-height:1.65;color:var(--gold-deep);max-width:17ch}
+/* on a marble section the niches invert: navy stone, cream numbers */
+.marble .medal::before{background:linear-gradient(168deg,var(--navy-2),var(--navy) 60%,var(--navy-deep))}
+.marble .medal-disc b{color:var(--text)}
+.marble .medal span{color:var(--gold)}
+.marble .medal-disc::before{opacity:.2}
+@media (max-width:900px){.medallions{grid-template-columns:1fr 1fr;row-gap:clamp(18px,4vw,30px)}.medal{max-width:230px}}
+@media (max-width:420px){.medal span{font-size:10px;letter-spacing:.1em}}
 
 /* ---------- values / feature list ---------- */
 .features{display:grid;grid-template-columns:repeat(var(--cols,3),1fr);gap:4px 34px;list-style:none;margin:0;padding:0}
@@ -283,7 +291,17 @@ body.paused *,body.paused *::before,body.paused *::after{animation-play-state:pa
 .marble .tab-note{color:var(--ink-soft)}
 .marble .paper{box-shadow:0 0 0 1px rgba(126,97,40,.25),0 40px 80px -40px rgba(60,45,20,.45)}
 .nav-links a[data-active]{color:var(--accent);opacity:1}
-@media (max-width:900px){.menus{grid-template-columns:1fr}.tabs{flex-direction:row;overflow-x:auto;margin-inline:calc(var(--gutter)*-1);padding:0 var(--gutter) 6px}.tab{flex:0 0 auto;width:auto}}
+@media (max-width:900px){.menus{grid-template-columns:1fr;gap:26px}
+.tabs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-inline:0;padding:0;overflow:visible}
+.tab{flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:5px;width:auto;height:100%;padding:13px 14px;border-radius:14px}
+.tab-num{font-size:10.5px}
+.tab-name{font-size:16px;line-height:1.25}
+.tab-note{margin-top:16px;font-size:13.5px}}
+@media (max-width:420px){.tabs{gap:8px}
+.tab{padding:11px 12px}
+.tab-name{font-size:14.5px}
+.dishes li{font-size:15.5px}
+.paper-foot .btn{width:100%;justify-content:center}}
 
 /* ---------- menu card deck ---------- */
 .deck{position:relative;height:500px;margin-top:10px}
