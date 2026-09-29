@@ -1,0 +1,39 @@
+/* =========================================================
+   Ground pattern variant. Loads on top of ground-cream.css,
+   so the palette is untouched. Only the field the page sits
+   on changes: the dense star jali gives way to a wide field
+   of cusped arches, the same silhouette as the arcades and
+   the jharokha niches, laid in courses like marble cladding.
+   ========================================================= */
+body.pattern{
+  --scale:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='48' viewBox='0 0 44 48'%3E%3Cg fill='none' stroke='%23D2AE6D' stroke-opacity='.55' stroke-width='1' stroke-linejoin='round'%3E%3Cpath d='M0 24V14C0 8 3 6 6 5.6C7 2.6 10 1 13 1.2C15 .2 17 0 22 0S29 .2 31 1.2C34 1 37 2.6 38 5.6C41 6 44 8 44 14V24' transform='translate(0 24)'/%3E%3Cpath d='M0 24V14C0 8 3 6 6 5.6C7 2.6 10 1 13 1.2C15 .2 17 0 22 0S29 .2 31 1.2C34 1 37 2.6 38 5.6C41 6 44 8 44 14V24' transform='translate(-22 0)'/%3E%3Cpath d='M0 24V14C0 8 3 6 6 5.6C7 2.6 10 1 13 1.2C15 .2 17 0 22 0S29 .2 31 1.2C34 1 37 2.6 38 5.6C41 6 44 8 44 14V24' transform='translate(22 0)'/%3E%3C/g%3E%3C/svg%3E");
+  --scale-soft:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='48' viewBox='0 0 44 48'%3E%3Cg fill='none' stroke='%23A9853F' stroke-opacity='.17' stroke-width='1' stroke-linejoin='round'%3E%3Cpath d='M0 24V14C0 8 3 6 6 5.6C7 2.6 10 1 13 1.2C15 .2 17 0 22 0S29 .2 31 1.2C34 1 37 2.6 38 5.6C41 6 44 8 44 14V24' transform='translate(0 24)'/%3E%3Cpath d='M0 24V14C0 8 3 6 6 5.6C7 2.6 10 1 13 1.2C15 .2 17 0 22 0S29 .2 31 1.2C34 1 37 2.6 38 5.6C41 6 44 8 44 14V24' transform='translate(-22 0)'/%3E%3Cpath d='M0 24V14C0 8 3 6 6 5.6C7 2.6 10 1 13 1.2C15 .2 17 0 22 0S29 .2 31 1.2C34 1 37 2.6 38 5.6C41 6 44 8 44 14V24' transform='translate(22 0)'/%3E%3C/g%3E%3C/svg%3E");
+  --seed:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='48' viewBox='0 0 44 48'%3E%3Cg fill='%23A9853F' fill-opacity='.3'%3E%3Ccircle cx='22' cy='25.6' r='1.2'/%3E%3Ccircle cx='0' cy='1.6' r='1.2'/%3E%3Ccircle cx='44' cy='1.6' r='1.2'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* the field itself, held still behind the page */
+body.pattern .env::after{
+  opacity:.42;
+  background:var(--seed) center/96px 105px,var(--scale) center/96px 105px;
+  -webkit-mask:radial-gradient(ellipse 66% 58% at 50% 48%,rgba(0,0,0,.3),#000 82%);
+  mask:radial-gradient(ellipse 66% 58% at 50% 48%,rgba(0,0,0,.3),#000 82%)}
+/* the two washes that keep it from reading flat */
+body.pattern .env::before{
+  width:150vmax;height:150vmax;left:-25vmax;top:-45vmax;
+  background:
+    radial-gradient(ellipse 46% 40% at 30% 26%,rgba(210,174,109,.26),rgba(210,174,109,0) 66%),
+    radial-gradient(ellipse 40% 38% at 72% 74%,rgba(142,42,58,.07),rgba(142,42,58,0) 64%);
+  animation-duration:120s}
+
+/* the marble bands stay plain, polished slabs set against the patterned wall */
+
+/* ---------- arcade separators in brand gold ---------- */
+/* the scallop courses between bands were cream on cream and read as nothing.
+   They now carry the logo's gold, with a deeper hairline under the lip. */
+body.pattern .arcade{
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='24' viewBox='0 0 44 24'%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23E9D3A2'/%3E%3Cstop offset='.55' stop-color='%23D2AE6D'/%3E%3Cstop offset='1' stop-color='%23B9924D'/%3E%3C/linearGradient%3E%3Cpath d='M0 24V14C0 8 3 6 6 5.6C7 2.6 10 1 13 1.2C15 .2 17 0 22 0S29 .2 31 1.2C34 1 37 2.6 38 5.6C41 6 44 8 44 14V24Z' fill='url(%23g)'/%3E%3C/svg%3E") 0 100%/44px 24px repeat-x}
+body.pattern .arcade.to-navy{
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='24' viewBox='0 0 44 24'%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23E9D3A2'/%3E%3Cstop offset='.55' stop-color='%23D2AE6D'/%3E%3Cstop offset='1' stop-color='%23B9924D'/%3E%3C/linearGradient%3E%3Cpath d='M0 24V14C0 8 3 6 6 5.6C7 2.6 10 1 13 1.2C15 .2 17 0 22 0S29 .2 31 1.2C34 1 37 2.6 38 5.6C41 6 44 8 44 14V24Z' fill='url(%23g)'/%3E%3C/svg%3E") 0 100%/44px 24px repeat-x,
+    var(--ground-2)}
