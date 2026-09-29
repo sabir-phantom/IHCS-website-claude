@@ -1,0 +1,117 @@
+/* =========================================================
+   Cream ground variant of the home page.
+   Loaded only by index-cream.html. Changes the ground the page
+   sits on to the tones used by iqbalcateringbd.com and re-points
+   the text, rules and panels that were tuned for the navy ground.
+   Layout, type, motion and content are untouched.
+   ========================================================= */
+body.cream{background:
+  radial-gradient(ellipse 60% 40% at 15% 20%,rgba(255,255,255,.55),rgba(255,255,255,0) 70%),
+  radial-gradient(ellipse 50% 60% at 85% 80%,rgba(214,200,170,.35),rgba(214,200,170,0) 70%),
+  linear-gradient(115deg,rgba(0,0,0,0) 40%,rgba(190,172,140,.12) 41%,rgba(0,0,0,0) 43%,rgba(0,0,0,0) 70%,rgba(190,172,140,.1) 71%,rgba(0,0,0,0) 72.5%),
+  var(--ivory);color:var(--ink)}
+body.cream h1,body.cream h2,body.cream h3,body.cream h4{color:var(--ink)}
+body.cream .eyebrow{color:var(--gold-deep)}
+body.cream .head p,body.cream .lede,body.cream p{color:var(--ink-soft)}
+body.cream .btn-ghost{color:var(--ink);border-color:rgba(126,97,40,.6)}
+body.cream .btn-ghost:hover{color:var(--ruby);border-color:var(--ruby)}
+body.cream .btn-accent{background:var(--navy);color:var(--ivory)}
+body.cream .btn-accent:hover{background:var(--panel)}
+body.cream .link-arrow{color:var(--ruby)}
+body.cream :focus-visible{outline-color:var(--ruby)}
+body.cream .orn{color:var(--gold-deep)}
+body.cream .jharokha .tag{background:var(--ivory);color:var(--gold-deep)}
+body.cream .split .copy p.big{color:var(--ink)}
+body.cream .medal::before{background:linear-gradient(168deg,var(--navy-2),var(--navy) 60%,var(--navy-deep))}
+body.cream .medal-disc b{color:var(--text)}
+body.cream .medal span{color:var(--gold)}
+body.cream .medal-disc::before{opacity:.2}
+body.cream .feature{border-top-color:rgba(126,97,40,.3)}
+body.cream .feature p{color:var(--ink-soft)}
+body.cream .svc-card{background:rgba(255,255,255,.55);box-shadow:inset 0 0 0 1px rgba(126,97,40,.32)}
+body.cream .svc-card p{color:var(--ink-soft)}
+body.cream .step{border-color:rgba(126,97,40,.35);background:rgba(255,255,255,.45)}
+body.cream .step-num{color:var(--gold-deep);border-color:rgba(126,97,40,.6)}
+body.cream .step p{color:var(--ink-soft)}
+body.cream .tab{border-color:rgba(126,97,40,.3);color:var(--ink)}
+body.cream .tab:hover{border-color:rgba(126,97,40,.65)}
+body.cream .tab[aria-selected="true"]{border-color:var(--gold-deep);background:rgba(255,255,255,.6)}
+body.cream .tab-num{color:var(--gold-deep)}
+body.cream .tab-note{color:var(--ink-soft)}
+body.cream .paper{box-shadow:0 0 0 1px rgba(126,97,40,.25),0 40px 80px -40px rgba(60,45,20,.45)}
+body.cream .venue-wall li{border-bottom-color:rgba(126,97,40,.25)}
+body.cream .royal-quote p{color:var(--ink)}
+body.cream .royal-quote cite{color:var(--ink-soft)}
+body.cream .royal-quote cite b{color:var(--gold-deep)}
+body.cream .partner span{color:var(--ink-soft)}
+body.cream .partner a.phone{color:var(--ruby)}
+body.cream .timeline::before{background:linear-gradient(rgba(126,97,40,.7),rgba(126,97,40,.2))}
+body.cream .timeline .when{color:var(--gold-deep)}
+body.cream .timeline p{color:var(--ink-soft)}
+body.cream .faq-item{border-color:rgba(126,97,40,.28)}
+body.cream .faq-item summary i::before,body.cream .faq-item summary i::after{background:var(--gold-deep)}
+body.cream .faq-item .ans{color:var(--ink-soft)}
+
+/* ---------- ground ---------- */
+/* #FBFAF7 and #F7F3EB are the two ground tones read off iqbalcateringbd.com */
+body.cream{--ground:#FBFAF7;--ground-2:#F7F3EB;background:var(--ground);color:var(--ink)}
+html:has(body.cream){background:#FBFAF7}
+body.cream .marble{background:
+  radial-gradient(ellipse 60% 40% at 15% 20%,rgba(255,255,255,.6),rgba(255,255,255,0) 70%),
+  radial-gradient(ellipse 50% 60% at 85% 80%,rgba(214,200,170,.3),rgba(214,200,170,0) 70%),
+  linear-gradient(115deg,rgba(0,0,0,0) 40%,rgba(190,172,140,.1) 41%,rgba(0,0,0,0) 43%,rgba(0,0,0,0) 70%,rgba(190,172,140,.09) 71%,rgba(0,0,0,0) 72.5%),
+  var(--ground-2)}
+body.cream .env::before{background:radial-gradient(circle,rgba(210,174,109,.16),rgba(210,174,109,0) 55%)}
+body.cream .env::after{opacity:.05}
+body.cream .stats-band{background:radial-gradient(ellipse 72% 120% at 50% 50%,rgba(210,174,109,.16),rgba(210,174,109,0) 70%)}
+body.cream .cta-band{background:radial-gradient(ellipse 60% 90% at 50% 100%,rgba(237,184,78,.2),rgba(237,184,78,0) 70%)}
+body.cream .line,body.cream .venue-wall li,body.cream .faq-item{border-color:rgba(126,97,40,.28)}
+
+/* arches between the two ground tones */
+body.cream .arcade{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='24' viewBox='0 0 44 24'%3E%3Cpath d='M0 24V14C0 8 3 6 6 5.6C7 2.6 10 1 13 1.2C15 .2 17 0 22 0S29 .2 31 1.2C34 1 37 2.6 38 5.6C41 6 44 8 44 14V24Z' fill='%23F7F3EB'/%3E%3C/svg%3E")}
+body.cream .arcade.to-navy{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='24' viewBox='0 0 44 24'%3E%3Cpath d='M0 24V14C0 8 3 6 6 5.6C7 2.6 10 1 13 1.2C15 .2 17 0 22 0S29 .2 31 1.2C34 1 37 2.6 38 5.6C41 6 44 8 44 14V24Z' fill='%23FBFAF7'/%3E%3C/svg%3E");background-color:var(--ground-2)}
+body.cream .inlay{background:var(--inlay) center/76px 40px repeat-x,var(--ground-2)}
+
+/* cards and panels that were tinted navy */
+body.cream .svc-card{background:rgba(255,255,255,.6);box-shadow:inset 0 0 0 1px rgba(126,97,40,.32)}
+body.cream .svc-card p{color:var(--ink-soft)}
+body.cream .ccard{background:rgba(255,255,255,.6);border-color:rgba(126,97,40,.28)}
+body.cream .deck-hint,body.cream .tab-note{color:var(--ink-soft)}
+body.cream .tab{border-color:rgba(126,97,40,.3);color:var(--ink)}
+body.cream .tab:hover{border-color:rgba(126,97,40,.65)}
+body.cream .tab[aria-selected="true"]{border-color:var(--gold-deep);background:rgba(255,255,255,.7)}
+body.cream .tab-num{color:var(--gold-deep)}
+body.cream .paper{box-shadow:0 0 0 1px rgba(126,97,40,.25),0 40px 80px -40px rgba(60,45,20,.45)}
+body.cream .reel-title{color:var(--text)}
+body.cream .reel-label{color:var(--gold)}
+
+/* nav: cream once scrolled, untouched while it floats over the hero video */
+body.cream .nav .brand-name{color:var(--text)}
+body.cream .nav .brand-name small{color:var(--gold)}
+body.cream .nav.scrolled,body.cream .nav.solid{background:rgba(251,250,247,.92);box-shadow:0 1px 0 rgba(126,97,40,.35)}
+body.cream .nav.scrolled .nav-links a,body.cream .nav.solid .nav-links a{color:var(--ink);text-shadow:none}
+body.cream .nav.scrolled .nav-links a:hover,body.cream .nav.scrolled .nav-links a[aria-current="page"],body.cream .nav.solid .nav-links a:hover,body.cream .nav.solid .nav-links a[aria-current="page"]{color:var(--ruby)}
+body.cream .nav.scrolled .brand-name,body.cream .nav.solid .brand-name{color:var(--ink);text-shadow:none}
+body.cream .nav.scrolled .brand-name small,body.cream .nav.solid .brand-name small{color:var(--gold-deep)}
+body.cream .nav.scrolled .btn-accent,body.cream .nav.solid .btn-accent{background:var(--navy);color:var(--ivory)}
+body.cream .nav.scrolled .nav-toggle,body.cream .nav.solid .nav-toggle{background:rgba(255,255,255,.6);border-color:rgba(126,97,40,.6)}
+body.cream .nav.scrolled .nav-toggle span,body.cream .nav.scrolled .nav-toggle span::before,body.cream .nav.scrolled .nav-toggle span::after,body.cream .nav.solid .nav-toggle span,body.cream .nav.solid .nav-toggle span::before,body.cream .nav.solid .nav-toggle span::after{background:var(--ink)}
+body.cream .nav.open .nav-toggle span{background:transparent}
+@media (max-width:1040px){
+body.cream .nav-links{background:var(--ground);border-bottom-color:rgba(126,97,40,.35)}
+body.cream .nav-links a{color:var(--ink);text-shadow:none}
+body.cream .nav-links a:hover,body.cream .nav-links a[aria-current="page"]{color:var(--ruby)}
+}
+
+/* the hero sits on video and the footer on its own dark band: both keep the original palette */
+body.cream .hero :is(h1,h2,h3,h4,p,span,b,cite,.lede,.band-sub){color:var(--text)}
+body.cream .hero :is(.eyebrow,.orn){color:var(--gold)}
+body.cream .hero .btn-ghost{color:var(--text);border-color:var(--gold-strong)}
+body.cream .hero .btn-ghost:hover{color:var(--accent);border-color:var(--accent)}
+body.cream .hero .btn-accent{background:var(--accent);color:var(--navy-deep)}
+body.cream .hero .btn-accent:hover{background:var(--accent-hover)}
+body.cream .hero .link-arrow{color:var(--accent)}
+body.cream .site-foot :is(h1,h2,h3,h4,p,span,li,a,cite){color:var(--text-2)}
+body.cream .site-foot :is(.foot-col h4){color:var(--gold)}
+body.cream .site-foot .foot-col a:hover,body.cream .site-foot .social a:hover{color:var(--accent)}
+body.cream .site-foot .inlay{background:var(--inlay) center/76px 40px repeat-x,var(--ivory)}
